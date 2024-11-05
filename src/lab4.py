@@ -53,10 +53,3 @@ def main():
     print(repr(christmas_tree_3))
     
 main()
-
-class Cat:
-    def __init__(bbb, price=0):
-        bbb.cat_price = price
-
-cat_1 = Cat()
-print(cat_1.cat_price)
