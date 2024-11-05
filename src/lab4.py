@@ -1,43 +1,45 @@
 class Product:
     def __init__(self, manufacturer="Some", height=0, price=0, material="some", details="Some", distance=0):
-        self.__tree_manufacturer = manufacturer
-        self.__tree_height = height
-        self.__tree_price = price
-        self.__tree_material = material
-        self.tree_details = details
-        self.tree_distance = distance
+        self.__manufacturer = manufacturer
+        self.__height = height
+        self.__price = price
+        self.__material = material
+        self.details = details
+        self.distance = distance
 
     def get_manufacturer(self):
-        return self.__tree_manufacturer
+        return self.__manufacturer
 
     def set_manufacturer(self, manufacturer):
-        self.__tree_manufacturer = manufacturer
+        self.__manufacturer = manufacturer
 
     def get_height(self):
-        return self.__tree_height
+        return self.__height
 
     def set_height(self, height):
-        self.__tree_height = height
+        self.__height = height
 
     def get_price(self):
-        return self.__tree_price
+        return self.__price
 
     def set_price(self, price):
-        self.__tree_price = price
+        self.__price = price
 
     def get_material(self):
-        return self.__tree_material
+        return self.__material
 
     def set_material(self, material):
-        self.__tree_material = material
+        self.__material = material
 
     def __str__(self):
-        return f"Fake christmas tree: manufacturer={self.__tree_manufacturer},\
-height={self.__tree_height}, price={self.__tree_price}, material={self.__tree_material},{self.tree_details}, distance to seller={self.tree_distance}m"
+        return f"Fake christmas tree: manufacturer={self.__manufacturer},\
+height={self.__height}, price={self.__price}, material={self.__material}, \
+{self.details}, distance to seller={self.distance}m"
 
     def __repr__(self):
-        return f"Fake christmas tree: manufacturer='{self.__tree_manufacturer}',\
-height={self.__tree_height}, price={self.__tree_price}, material={self.__tree_material},{self.tree_details}, distance to seller={self.tree_distance}m"
+        return f"Fake christmas tree: manufacturer='{self.__manufacturer}',\
+height={self.__height}, price={self.__price}, material={self.__material}, \
+{self.details}, distance to seller={self.distance}m"
 
     def __del__(self):
         print("Tree deleted")
